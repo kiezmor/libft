@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 00:10:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/12/01 01:57:59 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/03/08 01:21:24 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <stdio.h>
+# include <fcntl.h>
+
+# define BUFF_SIZE 32
+# define CHAR '\n'
 
 typedef struct		s_list
 {
@@ -93,5 +98,7 @@ char				*ft_strrev(char *str);
 int					ft_sqrt(int nb);
 int					*ft_range(int min, int max);
 int					ft_fibonacci(int index);
+
+int					get_next_line(const int fd, char **line);
 
 #endif
