@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 00:10:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/03/08 01:21:24 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/04/25 07:26:48 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <stdio.h>
 # include <fcntl.h>
+# include <wchar.h>
 
 # define BUFF_SIZE 32
 # define CHAR '\n'
@@ -100,5 +101,9 @@ int					*ft_range(int min, int max);
 int					ft_fibonacci(int index);
 
 int					get_next_line(const int fd, char **line);
+
+void				ft_putwchar(wchar_t wc);
+int					ft_wcslen(wchar_t *wcs);
+void				ft_putwcs(wchar_t *wcs);
 
 #endif
