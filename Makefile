@@ -184,7 +184,7 @@ $(NAME): $(OBJ_DS) $(SRC)
 # 	@$(CC) $(CFLAGS) -c $(SRC) $ $(INC_DIR)
 
 clean: 
-	@rm -f $(OBJ_D)
+	@rm -rf $(OBJ_D)
 	@echo "${R}Objects deleted${NC}"
 
 fclean : clean
