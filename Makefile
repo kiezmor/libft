@@ -119,12 +119,12 @@ STR		=	ft_atoi.c\
 
 ## Utils
 
-SRC		=	$(DIS:%=$(SRC_D)/$(DIS_D)/%.c)\
-			$(INT:%=$(SRC_D)/$(INT_D)/%.c)\
-			$(LST:%=$(SRC_D)/$(LST_D)/%.c)\
-			$(MEM:%=$(SRC_D)/$(MEM_D)/%.c)\
-			$(OTH:%=$(SRC_D)/$(OTH_D)/%.c)\
-			$(STR:%=$(SRC_D)/$(STR_D)/%.c)
+SRC		=	$(DIS:%=$(SRC_D)/$(DIS_D)/%)\
+			$(INT:%=$(SRC_D)/$(INT_D)/%)\
+			$(LST:%=$(SRC_D)/$(LST_D)/%)\
+			$(MEM:%=$(SRC_D)/$(MEM_D)/%)\
+			$(OTH:%=$(SRC_D)/$(OTH_D)/%)\
+			$(STR:%=$(SRC_D)/$(STR_D)/%)
 
 OBJ		=	$(SRC:$(SRC_D)%.c=$(OBJ_D)%.o)
 
@@ -160,7 +160,7 @@ all: $(NAME)
 
 $(OBJ_DS):
 	@mkdir -p $@
-	@echo	"{G}Creating	: {Y}$@"
+	@echo	"${G}Creating	: ${Y}$@"
 
 $(SRC):
 
