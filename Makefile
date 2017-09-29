@@ -164,11 +164,11 @@ $(OBJ_DS):
 
 $(SRC):
 
-$(OBJ_DS)/%.o: $(SRC_D)/%.c
+$(OBJ_D)/%.o: $(SRC_D)/%.c
 	@$(CC) -c $< -o $@
 	@echo "${G}[OK]${NC}	${Y}Compiling:${NC}" $<
 
-$(NAME): $(OBJ_D) $(SRC)
+$(NAME): $(OBJ_DS) $(SRC)
 	@$(MAKE) $(OBJ)
 	@echo "${G}objects created${NC}"
 	@ar rcs $@ $(OBJ)
