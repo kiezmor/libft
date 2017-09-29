@@ -16,8 +16,9 @@ NAME	=	libft.a
 
 ## Compilation
 
-CC		=	gcc
+CC		=	gcc $(FLAGS) $(INC)
 CFLAGS	=	-Wall -Wextra -Werror
+INC = $(INC_D:%=-I ./%)
 
 ## Directories
 
