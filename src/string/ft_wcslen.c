@@ -17,6 +17,8 @@ int		ft_wcslen(wchar_t *wcs)
 	int	i;
 
 	i = 0;
+	if (wcs)
+		return (0);
 	while (*wcs && wcs[i])
 		i++;
 	return (i);

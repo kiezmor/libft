@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_wcstombs.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/22 04:36:07 by vpluchar          #+#    #+#             */
-/*   Updated: 2016/11/28 23:42:49 by vpluchar         ###   ########.fr       */
+/*   Created: 2017/10/01 18:49:44 by vpluchar          #+#    #+#             */
+/*   Updated: 2017/10/01 18:49:44 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char *s1, char *s2)
+size_t	ft_wcstombs(char *s, const wchar_t *ws, size_t n)
 {
-	if (*s1 == 0)
-		return (0);
-	while (*s1)
-	{
-		if (*s1++ != *s2++)
-			return (0);
-	}
-	return (1);
+	size_t	src;
+	size_t	dest;
+
+	src = 0;
+	dest = 0;
+	while (dest < n - 1)
+		dest += (ft_wctomb(&s[dest], ws[src++]));
+	s[dest] = '\0';
+	return (dest);
 }

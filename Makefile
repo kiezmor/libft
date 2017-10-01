@@ -116,7 +116,9 @@ STR		=	ft_atoi.c\
 			ft_strtrim.c\
 			ft_tolower.c\
 			ft_toupper.c\
-			ft_wcslen.c
+			ft_wcslen.c\
+			ft_wcstombs.c\
+			ft_wctomb.c
 
 ## Utils
 
