@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2017/10/19 02:52:17 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/10/19 22:27:11 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,11 @@ NAME	=	libft.a
 ## Compilation
 
 CC		=	gcc $(FLAGS) $(INC)
-CFLAGS	=	-Wall -Wextra -Werror
-INC = $(INC_D:%=-I ./%)
+FLAGS	=	-Wall -Wextra -Werror
+INC		= 	-I includes
 
 ## Directories
 
-INC_D	= 	-I includes
 SRC_D	=	src
 OBJ_D	= 	obj
 
@@ -144,7 +143,7 @@ all: $(NAME)
 
 $(OBJ_DS):
 	@mkdir -p $@
-	@echo	"${G}Creating	: ${Y}$@"
+	@echo	"${G}Creating	: ${Y}$@ ${NC}"
 
 $(SRC):
 
