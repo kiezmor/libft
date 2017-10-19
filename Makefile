@@ -6,7 +6,7 @@
 #    By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 05:28:33 by vpluchar          #+#    #+#              #
-#    Updated: 2017/04/25 07:25:40 by vpluchar         ###   ########.fr        #
+#    Updated: 2017/10/19 02:52:17 by vpluchar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -156,11 +156,11 @@ $(NAME): $(OBJ_DS) $(SRC)
 	@$(MAKE) $(OBJ)
 	@echo "${G}objects created${NC}"
 	@ar rcs $@ $(OBJ)
-	@echo "${G}library created${NC}"
+	@echo "${G}$(NAME) created${NC}"
 
 clean: 
 	@rm -rf $(OBJ_D)
-	@echo "${Y}Objects ${R}deleted${NC}"
+	@echo "${R}objects deleted${NC}"
 
 fclean : clean
 	@rm -f $(NAME)
