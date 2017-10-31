@@ -6,7 +6,7 @@
 /*   By: vpluchar <vpluchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 14:50:55 by vpluchar          #+#    #+#             */
-/*   Updated: 2017/10/29 18:14:22 by vpluchar         ###   ########.fr       */
+/*   Updated: 2017/10/31 20:35:46 by vpluchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ static int		ft_stock(char **stock, char **line)
 	return (1);
 }
 
-int				gnl(const int fd, char **line)
+int				ft_gnl(const int fd, char **line)
 {
 	static t_list	*list = NULL;
 	char			**stock;
